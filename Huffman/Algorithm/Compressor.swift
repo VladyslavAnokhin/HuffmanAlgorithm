@@ -36,33 +36,18 @@ extension Huffman {
             }
         }
         
-        let tree: Tree
+        let codesTables: [Character: [Bool]]
         
-        init(tree: Tree) {
-            self.tree = tree
+        init(codesTables: [Character: [Bool]]) {
+            self.codesTables = codesTables
         }
         
         func compress(text: String) -> Data {
             let writer = BitWriter()
             
-            func find(c: Character, node: Tree.Node?) {
-                if node?.value == c {
-                    return
-                }
-                
-                if node?.leftSubTreeValues?.contains(c) == true {
-                    writer.writeBit(bit: false)
-                    return find(c: c, node: node?.left)
-                } else if node?.rightSubTreeValues?.contains(c) == true {
-                    writer.writeBit(bit: true)
-                    return find(c: c, node: node?.right)
-                } else {
-                    fatalError()
-                }
-            }
-            
             text.forEach {
-                find(c: $0, node: tree.root)
+                guard let path = codesTables[$0] else { fatalError() }
+                path.forEach(writer.writeBit)
             }
             
             writer.flush()

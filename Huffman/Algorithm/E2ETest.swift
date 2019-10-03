@@ -19,8 +19,8 @@ class E2ETest: XCTestCase {
         let frequence = Huffman.FrequenceAnalizer().analize(string: text)
         let nodes = frequence.map { Huffman.Tree.Node(frequence: $0.value, value: $0.key) }
         let tree = Huffman.Tree(array: nodes)
-        
-        compressor = Huffman.Compressor(tree: tree)
+        let codes = Huffman.convertTreeToCodesTable(tree: tree)
+        compressor = Huffman.Compressor(codesTables: codes)
         decompressor = Huffman.Decompressor(tree: tree)
     }
 

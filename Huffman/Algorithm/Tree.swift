@@ -15,24 +15,17 @@ extension Huffman {
             let frequence: Int
             let value: Character?
             
-            let rightSubTreeValues: String?
             let right: Node?
-            
-            let leftSubTreeValues: String?
             let left: Node?
             
             init(frequence: Int,
                  value: Character? = nil,
                  left: Node? = nil,
-                 right: Node? = nil,
-                 leftSubTreeValues: String? = nil,
-                 rightSubTreeValues: String? = nil) {
+                 right: Node? = nil) {
                 self.frequence = frequence
                 self.value = value
                 self.left = left
                 self.right = right
-                self.leftSubTreeValues = leftSubTreeValues
-                self.rightSubTreeValues = rightSubTreeValues
             }
         }
         
@@ -54,36 +47,10 @@ extension Huffman {
                 let last = newArray.removeLast()
                 let preLast = newArray.removeLast()
                 
-                func subTreeValues(current: Character?,
-                                   leftSubTree: String?,
-                                   rightSubTree: String?) -> String {
-                    var result = ""
-                    
-                    if let current = current {
-                        result += String(current)
-                    }
-                    
-                    if let subTree = leftSubTree {
-                        result += subTree
-                    }
-                    
-                    if let subTree = rightSubTree {
-                        result += subTree
-                    }
-                    
-                    return result
-                }
-                
                 let newNode = Node(frequence: last.frequence + preLast.frequence,
                                    value: nil,
                                    left: last,
-                                   right: preLast,
-                                   leftSubTreeValues: subTreeValues(current: last.value,
-                                                                    leftSubTree: last.leftSubTreeValues,
-                                                                    rightSubTree: last.rightSubTreeValues),
-                                   rightSubTreeValues: subTreeValues(current: preLast.value,
-                                                                     leftSubTree: preLast.leftSubTreeValues,
-                                                                     rightSubTree: preLast.rightSubTreeValues))
+                                   right: preLast)
                 
                 return connectSmallestNods(candidate: newArray + [newNode])
             }
