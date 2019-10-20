@@ -11,12 +11,12 @@ import XCTest
 
 class FrequenceAnalizerTest: XCTestCase {
     
-    let sut = Huffman.FrequenceAnalizer()
+    let sut = Huffman.analize
     
     func testSymbol() {
         let single = "a"
         
-        let result = sut.analize(string: single)
+        let result = sut(single)
         
         XCTAssertEqual(result["a"], 1)
     }
@@ -24,7 +24,7 @@ class FrequenceAnalizerTest: XCTestCase {
     func testDouble() {
         let double = "aa"
         
-        let result = sut.analize(string: double)
+        let result = sut(double)
         
         XCTAssertEqual(result["a"], 2)
     }
@@ -32,7 +32,7 @@ class FrequenceAnalizerTest: XCTestCase {
     func testDifferentSymbols() {
         let str = "abcab"
         
-        let result = sut.analize(string: str)
+        let result = sut(str)
         
         XCTAssertEqual(result["a"], 2)
         XCTAssertEqual(result["b"], 2)

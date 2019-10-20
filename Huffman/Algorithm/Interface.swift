@@ -10,8 +10,9 @@ import Foundation
 
 enum Huffman {
     static func compress(string: String) -> (compressed: Data, decompres: () -> String ) {
-        let frequence = FrequenceAnalizer().analize(string: string)
-        let nodes = frequence.map { Tree.Node(frequence: $0.value, value: $0.key) }
+
+        let nodes = analize(string: string)
+                    .map { Tree.Node(frequence: $0.value, value: $0.key) }
         let tree = Tree(array: nodes)
         
         print(tree.description)

@@ -9,13 +9,10 @@
 import Foundation
 
 extension Huffman {
-    class FrequenceAnalizer {
-        
-        func analize(string: String) -> [Character: Int] {
-            return string.reduce(into: [:]) { result, char in
-                let frequance = result[char]
-                result[char] = (frequance ?? 0) + 1
-            }
+    static func analize(string: String) -> [Character: Int] {
+        return string.reduce(into: [:]) { result, char in
+            let frequance = result[char]
+            result[char] = (frequance ?? 0) + 1
         }
     }
 }

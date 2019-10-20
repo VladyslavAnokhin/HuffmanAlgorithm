@@ -17,10 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         print(Date())
         let result = Huffman.compress(string: text)
-
+        print(Date())
+        
         print(result.compressed)
         print(data)
-        print(Date())
         
         return true
     }

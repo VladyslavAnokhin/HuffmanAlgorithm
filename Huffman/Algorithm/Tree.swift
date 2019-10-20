@@ -46,13 +46,13 @@ extension Huffman {
                 
                 let last = newArray.removeLast()
                 let preLast = newArray.removeLast()
-                
                 let newNode = Node(frequence: last.frequence + preLast.frequence,
                                    value: nil,
                                    left: last,
                                    right: preLast)
+                newArray.append(newNode)
                 
-                return connectSmallestNods(candidate: newArray + [newNode])
+                return connectSmallestNods(candidate: newArray)
             }
             
             self.init(root: connectSmallestNods(candidate: array).first)

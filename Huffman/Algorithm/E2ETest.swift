@@ -16,7 +16,7 @@ class E2ETest: XCTestCase {
     var decompressor: Huffman.Decompressor!
     
     override func setUp() {
-        let frequence = Huffman.FrequenceAnalizer().analize(string: text)
+        let frequence = Huffman.analize(string: text)
         let nodes = frequence.map { Huffman.Tree.Node(frequence: $0.value, value: $0.key) }
         let tree = Huffman.Tree(array: nodes)
         let codes = Huffman.convertTreeToCodesTable(tree: tree)
