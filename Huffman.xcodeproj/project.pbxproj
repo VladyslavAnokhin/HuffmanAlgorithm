@@ -88,6 +88,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A40A69A23A715010031E91F /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				9A40A69C23A715310031E91F /* FrequenceBasedCompression */,
+				9A40A69B23A7151D0031E91F /* PathBasedCompression */,
+				9A8BDFF023450E24000D7A85 /* Tree.swift */,
+			);
+			path = Tree;
+			sourceTree = "<group>";
+		};
+		9A40A69B23A7151D0031E91F /* PathBasedCompression */ = {
+			isa = PBXGroup;
+			children = (
+				9A6BA7BE235D140300E7F9C2 /* TreeCompressor.swift */,
+				9A6BA7BA235D13E000E7F9C2 /* TreeCompressorTest.swift */,
+				9A6BA7C0235D140D00E7F9C2 /* TreeDecoder.swift */,
+				9A6BA7BC235D13F100E7F9C2 /* TreeDecoderTest.swift */,
+			);
+			path = PathBasedCompression;
+			sourceTree = "<group>";
+		};
+		9A40A69C23A715310031E91F /* FrequenceBasedCompression */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FrequenceBasedCompression;
+			sourceTree = "<group>";
+		};
 		9A6050ED2360E0F90009495C /* Bit */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,14 +170,10 @@
 		9A8BDFEC23450E24000D7A85 /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				9A40A69A23A715010031E91F /* Tree */,
 				9A6050ED2360E0F90009495C /* Bit */,
 				9A8BDFEF23450E24000D7A85 /* Compressor.swift */,
 				9A8BDFEE23450E24000D7A85 /* Decompressor.swift */,
-				9A8BDFF023450E24000D7A85 /* Tree.swift */,
-				9A6BA7BE235D140300E7F9C2 /* TreeCompressor.swift */,
-				9A6BA7BA235D13E000E7F9C2 /* TreeCompressorTest.swift */,
-				9A6BA7C0235D140D00E7F9C2 /* TreeDecoder.swift */,
-				9A6BA7BC235D13F100E7F9C2 /* TreeDecoderTest.swift */,
 				9AAD076523456FEC0072D74F /* TreeConverter.swift */,
 				9AAD0767234571410072D74F /* TreeConverterTest.swift */,
 				9A8BDFF123450E24000D7A85 /* FrequenceAnalizer.swift */,

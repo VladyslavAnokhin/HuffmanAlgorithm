@@ -38,7 +38,8 @@ extension Huffman {
                 return Tree.Node(frequence: 0, value: array[0].value)
             }
             
-            let leftSubInfo = array.filter { $0.path[0] == false }
+            let leftSubInfo = array
+                .filter { $0.path[0] == false }
                 .map { Info(pathLenght: $0.pathLenght,
                             path: Array($0.path.dropFirst()),
                             value: $0.value) }
