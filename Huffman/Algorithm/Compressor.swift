@@ -17,16 +17,11 @@ extension Huffman {
             self.codesTables = codesTables
         }
         
-        func compress(text: String) -> Data {
-            let writer = BitWriter()
-            
-            text.forEach {
-                guard let path = codesTables[$0] else { fatalError() }
-                path.forEach(writer.writeBit)
+        func compress(text: String) -> [Bool] {
+            return text.reduce(into: [Bool]()) { (result, c) in
+                guard let path = self.codesTables[c] else { fatalError() }
+                result.append(contentsOf: path)
             }
-            
-            writer.flush()
-            return writer.data as Data
         }
     }
 }

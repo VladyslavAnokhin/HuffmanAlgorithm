@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		9A6050EF2360E10D0009495C /* BitWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6050EE2360E10D0009495C /* BitWriter.swift */; };
 		9A6050F12360E1190009495C /* BitReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6050F02360E1190009495C /* BitReader.swift */; };
-		9A6BA7BB235D13E000E7F9C2 /* TreeCoderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6BA7BA235D13E000E7F9C2 /* TreeCoderTest.swift */; };
+		9A6BA7BB235D13E000E7F9C2 /* TreeCompressorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6BA7BA235D13E000E7F9C2 /* TreeCompressorTest.swift */; };
 		9A6BA7BD235D13F100E7F9C2 /* TreeDecoderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6BA7BC235D13F100E7F9C2 /* TreeDecoderTest.swift */; };
-		9A6BA7BF235D140300E7F9C2 /* TreeCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6BA7BE235D140300E7F9C2 /* TreeCoder.swift */; };
+		9A6BA7BF235D140300E7F9C2 /* TreeCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6BA7BE235D140300E7F9C2 /* TreeCompressor.swift */; };
 		9A6BA7C1235D140D00E7F9C2 /* TreeDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6BA7C0235D140D00E7F9C2 /* TreeDecoder.swift */; };
 		9A8BDFCB23450DF6000D7A85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BDFCA23450DF6000D7A85 /* AppDelegate.swift */; };
 		9A8BDFCD23450DF6000D7A85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BDFCC23450DF6000D7A85 /* SceneDelegate.swift */; };
@@ -44,9 +44,9 @@
 /* Begin PBXFileReference section */
 		9A6050EE2360E10D0009495C /* BitWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitWriter.swift; sourceTree = "<group>"; };
 		9A6050F02360E1190009495C /* BitReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitReader.swift; sourceTree = "<group>"; };
-		9A6BA7BA235D13E000E7F9C2 /* TreeCoderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeCoderTest.swift; sourceTree = "<group>"; };
+		9A6BA7BA235D13E000E7F9C2 /* TreeCompressorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeCompressorTest.swift; sourceTree = "<group>"; };
 		9A6BA7BC235D13F100E7F9C2 /* TreeDecoderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDecoderTest.swift; sourceTree = "<group>"; };
-		9A6BA7BE235D140300E7F9C2 /* TreeCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeCoder.swift; sourceTree = "<group>"; };
+		9A6BA7BE235D140300E7F9C2 /* TreeCompressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeCompressor.swift; sourceTree = "<group>"; };
 		9A6BA7C0235D140D00E7F9C2 /* TreeDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDecoder.swift; sourceTree = "<group>"; };
 		9A8BDFC723450DF6000D7A85 /* Huffman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huffman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8BDFCA23450DF6000D7A85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,8 +146,8 @@
 				9A8BDFEF23450E24000D7A85 /* Compressor.swift */,
 				9A8BDFEE23450E24000D7A85 /* Decompressor.swift */,
 				9A8BDFF023450E24000D7A85 /* Tree.swift */,
-				9A6BA7BE235D140300E7F9C2 /* TreeCoder.swift */,
-				9A6BA7BA235D13E000E7F9C2 /* TreeCoderTest.swift */,
+				9A6BA7BE235D140300E7F9C2 /* TreeCompressor.swift */,
+				9A6BA7BA235D13E000E7F9C2 /* TreeCompressorTest.swift */,
 				9A6BA7C0235D140D00E7F9C2 /* TreeDecoder.swift */,
 				9A6BA7BC235D13F100E7F9C2 /* TreeDecoderTest.swift */,
 				9AAD076523456FEC0072D74F /* TreeConverter.swift */,
@@ -267,7 +267,7 @@
 				9A8BDFCD23450DF6000D7A85 /* SceneDelegate.swift in Sources */,
 				9A8BDFFC23454592000D7A85 /* Interface.swift in Sources */,
 				9A8BDFF523450E2C000D7A85 /* Tree.swift in Sources */,
-				9A6BA7BF235D140300E7F9C2 /* TreeCoder.swift in Sources */,
+				9A6BA7BF235D140300E7F9C2 /* TreeCompressor.swift in Sources */,
 				9A6050EF2360E10D0009495C /* BitWriter.swift in Sources */,
 				9A8BDFF423450E2C000D7A85 /* Compressor.swift in Sources */,
 				9AAD076623456FEC0072D74F /* TreeConverter.swift in Sources */,
@@ -286,7 +286,7 @@
 				9A6BA7BD235D13F100E7F9C2 /* TreeDecoderTest.swift in Sources */,
 				9AAD0768234571410072D74F /* TreeConverterTest.swift in Sources */,
 				9A8BDFE223450DF8000D7A85 /* HuffmanTests.swift in Sources */,
-				9A6BA7BB235D13E000E7F9C2 /* TreeCoderTest.swift in Sources */,
+				9A6BA7BB235D13E000E7F9C2 /* TreeCompressorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,6 +27,10 @@ extension Huffman {
                 self.left = left
                 self.right = right
             }
+            
+            convenience init(left: Node?, right: Node?) {
+                self.init(frequence: 0, left: left, right: right)
+            }
         }
         
         let root: Node?
@@ -36,6 +40,10 @@ extension Huffman {
         }
         
         convenience init(array: [Node]) {
+            
+            guard array.isEmpty == false else {
+                fatalError("can't create tree from empty array")
+            }
             
             func connectSmallestNods(candidate: [Node]) -> [Node] {
                 if candidate.count == 1 {

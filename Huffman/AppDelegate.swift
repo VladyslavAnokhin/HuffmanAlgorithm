@@ -19,8 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let result = Huffman.compress(string: text)
         print(Date())
         
-        print(result.compressed)
+        print(Date())
+        let decompressed = Huffman.decompress(data: result)
+        print(Date())
+        
         print(data)
+        print(result)
+        print(decompressed == text)
         
         return true
     }

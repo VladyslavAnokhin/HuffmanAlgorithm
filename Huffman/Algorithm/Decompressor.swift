@@ -18,13 +18,11 @@ extension Huffman {
             self.tree = tree
         }
         
-        func decompress(data: Data) -> String {
+        func decompress(bits: [Bool]) -> String {
             guard let root = tree.root else { fatalError() }
             var currentNode = root
             
-            return BitReader()
-                .readBit(from: data)
-                .reduce(into: "") {  result, bit in
+            return bits.reduce(into: "") {  result, bit in
                     if bit == false,
                         let left = currentNode.left {
                         currentNode = left

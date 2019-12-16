@@ -11,7 +11,7 @@ import XCTest
 
 class E2ETest: XCTestCase {
 
-    let text = "Hello World!!"
+    let text = "Hello World!!!"
     var compressor: Huffman.Compressor!
     var decompressor: Huffman.Decompressor!
     
@@ -23,17 +23,11 @@ class E2ETest: XCTestCase {
         compressor = Huffman.Compressor(codesTables: codes)
         decompressor = Huffman.Decompressor(tree: tree)
     }
-
-    func test() {
-        let compressed = compressor.compress(text: text)
-        let decompressed = decompressor.decompress(data: compressed)
-        
-        XCTAssertEqual(decompressed, text)
-    }
     
     func testInterface() {
-        let result = Huffman.compress(string: text)
-        XCTAssertEqual(text, result.decompres())
+        let compressed = Huffman.compress(string: text)
+        let decompressed = Huffman.decompress(data: compressed)
+        XCTAssertEqual(decompressed, text)
     }
 
 }
