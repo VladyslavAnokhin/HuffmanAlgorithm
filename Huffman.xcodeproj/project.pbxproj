@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A40A6B323AD92500031E91F /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40A6B223AD92500031E91F /* Measurement.swift */; };
+		9A40A6BA23AD929F0031E91F /* lotr.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A40A69E23AD7BFB0031E91F /* lotr.txt */; };
+		9A40A6BB23AD929F0031E91F /* lotr_compressed.bin in Resources */ = {isa = PBXBuildFile; fileRef = 9A40A6A623AD8CFA0031E91F /* lotr_compressed.bin */; };
 		9A6050EF2360E10D0009495C /* BitWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6050EE2360E10D0009495C /* BitWriter.swift */; };
 		9A6050F12360E1190009495C /* BitReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6050F02360E1190009495C /* BitReader.swift */; };
 		9A6BA7BB235D13E000E7F9C2 /* TreeCompressorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6BA7BA235D13E000E7F9C2 /* TreeCompressorTest.swift */; };
@@ -19,7 +22,6 @@
 		9A8BDFD223450DF6000D7A85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A8BDFD023450DF6000D7A85 /* Main.storyboard */; };
 		9A8BDFD423450DF8000D7A85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8BDFD323450DF8000D7A85 /* Assets.xcassets */; };
 		9A8BDFD723450DF8000D7A85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A8BDFD523450DF8000D7A85 /* LaunchScreen.storyboard */; };
-		9A8BDFE223450DF8000D7A85 /* HuffmanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BDFE123450DF8000D7A85 /* HuffmanTests.swift */; };
 		9A8BDFF323450E2C000D7A85 /* Decompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BDFEE23450E24000D7A85 /* Decompressor.swift */; };
 		9A8BDFF423450E2C000D7A85 /* Compressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BDFEF23450E24000D7A85 /* Compressor.swift */; };
 		9A8BDFF523450E2C000D7A85 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BDFF023450E24000D7A85 /* Tree.swift */; };
@@ -32,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9A40A6B523AD92500031E91F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A8BDFBF23450DF6000D7A85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A8BDFC623450DF6000D7A85;
+			remoteInfo = Huffman;
+		};
 		9A8BDFDE23450DF8000D7A85 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A8BDFBF23450DF6000D7A85 /* Project object */;
@@ -42,6 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A40A69E23AD7BFB0031E91F /* lotr.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = lotr.txt; sourceTree = "<group>"; };
+		9A40A6A623AD8CFA0031E91F /* lotr_compressed.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = lotr_compressed.bin; sourceTree = "<group>"; };
+		9A40A6B023AD92500031E91F /* Measurement.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Measurement.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A40A6B223AD92500031E91F /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
+		9A40A6B423AD92500031E91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A6050EE2360E10D0009495C /* BitWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitWriter.swift; sourceTree = "<group>"; };
 		9A6050F02360E1190009495C /* BitReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitReader.swift; sourceTree = "<group>"; };
 		9A6BA7BA235D13E000E7F9C2 /* TreeCompressorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeCompressorTest.swift; sourceTree = "<group>"; };
@@ -57,7 +71,6 @@
 		9A8BDFD623450DF8000D7A85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A8BDFD823450DF8000D7A85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A8BDFDD23450DF8000D7A85 /* HuffmanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HuffmanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A8BDFE123450DF8000D7A85 /* HuffmanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuffmanTests.swift; sourceTree = "<group>"; };
 		9A8BDFE323450DF8000D7A85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A8BDFEE23450E24000D7A85 /* Decompressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decompressor.swift; sourceTree = "<group>"; };
 		9A8BDFEF23450E24000D7A85 /* Compressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compressor.swift; sourceTree = "<group>"; };
@@ -71,6 +84,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9A40A6AD23AD92500031E91F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9A8BDFC423450DF6000D7A85 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -116,6 +136,17 @@
 			path = FrequenceBasedCompression;
 			sourceTree = "<group>";
 		};
+		9A40A6B123AD92500031E91F /* Measurement */ = {
+			isa = PBXGroup;
+			children = (
+				9A40A69E23AD7BFB0031E91F /* lotr.txt */,
+				9A40A6A623AD8CFA0031E91F /* lotr_compressed.bin */,
+				9A40A6B223AD92500031E91F /* Measurement.swift */,
+				9A40A6B423AD92500031E91F /* Info.plist */,
+			);
+			path = Measurement;
+			sourceTree = "<group>";
+		};
 		9A6050ED2360E0F90009495C /* Bit */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +161,7 @@
 			children = (
 				9A8BDFC923450DF6000D7A85 /* Huffman */,
 				9A8BDFE023450DF8000D7A85 /* HuffmanTests */,
+				9A40A6B123AD92500031E91F /* Measurement */,
 				9A8BDFC823450DF6000D7A85 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -139,6 +171,7 @@
 			children = (
 				9A8BDFC723450DF6000D7A85 /* Huffman.app */,
 				9A8BDFDD23450DF8000D7A85 /* HuffmanTests.xctest */,
+				9A40A6B023AD92500031E91F /* Measurement.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,7 +194,6 @@
 		9A8BDFE023450DF8000D7A85 /* HuffmanTests */ = {
 			isa = PBXGroup;
 			children = (
-				9A8BDFE123450DF8000D7A85 /* HuffmanTests.swift */,
 				9A8BDFE323450DF8000D7A85 /* Info.plist */,
 			);
 			path = HuffmanTests;
@@ -187,6 +219,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9A40A6AF23AD92500031E91F /* Measurement */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A40A6B723AD92500031E91F /* Build configuration list for PBXNativeTarget "Measurement" */;
+			buildPhases = (
+				9A40A6AC23AD92500031E91F /* Sources */,
+				9A40A6AD23AD92500031E91F /* Frameworks */,
+				9A40A6AE23AD92500031E91F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A40A6B623AD92500031E91F /* PBXTargetDependency */,
+			);
+			name = Measurement;
+			productName = Measurement;
+			productReference = 9A40A6B023AD92500031E91F /* Measurement.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9A8BDFC623450DF6000D7A85 /* Huffman */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A8BDFE623450DF8000D7A85 /* Build configuration list for PBXNativeTarget "Huffman" */;
@@ -228,10 +278,14 @@
 		9A8BDFBF23450DF6000D7A85 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Vladyslav Anokhin";
 				TargetAttributes = {
+					9A40A6AF23AD92500031E91F = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 9A8BDFC623450DF6000D7A85;
+					};
 					9A8BDFC623450DF6000D7A85 = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -256,11 +310,21 @@
 			targets = (
 				9A8BDFC623450DF6000D7A85 /* Huffman */,
 				9A8BDFDC23450DF8000D7A85 /* HuffmanTests */,
+				9A40A6AF23AD92500031E91F /* Measurement */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9A40A6AE23AD92500031E91F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A40A6BA23AD929F0031E91F /* lotr.txt in Resources */,
+				9A40A6BB23AD929F0031E91F /* lotr_compressed.bin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9A8BDFC523450DF6000D7A85 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,6 +345,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9A40A6AC23AD92500031E91F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A40A6B323AD92500031E91F /* Measurement.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9A8BDFC323450DF6000D7A85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,7 +381,6 @@
 				9A8BDFF823450E30000D7A85 /* FrequenceAnalizerTest.swift in Sources */,
 				9A6BA7BD235D13F100E7F9C2 /* TreeDecoderTest.swift in Sources */,
 				9AAD0768234571410072D74F /* TreeConverterTest.swift in Sources */,
-				9A8BDFE223450DF8000D7A85 /* HuffmanTests.swift in Sources */,
 				9A6BA7BB235D13E000E7F9C2 /* TreeCompressorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +388,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9A40A6B623AD92500031E91F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A8BDFC623450DF6000D7A85 /* Huffman */;
+			targetProxy = 9A40A6B523AD92500031E91F /* PBXContainerItemProxy */;
+		};
 		9A8BDFDF23450DF8000D7A85 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9A8BDFC623450DF6000D7A85 /* Huffman */;
@@ -344,6 +420,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9A40A6B823AD92500031E91F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 96YMJQ87Y2;
+				INFOPLIST_FILE = Measurement/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vladyslav.anokhin.Measurement;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Huffman.app/Huffman";
+			};
+			name = Debug;
+		};
+		9A40A6B923AD92500031E91F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 96YMJQ87Y2;
+				INFOPLIST_FILE = Measurement/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vladyslav.anokhin.Measurement;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Huffman.app/Huffman";
+			};
+			name = Release;
+		};
 		9A8BDFE423450DF8000D7A85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -541,6 +659,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9A40A6B723AD92500031E91F /* Build configuration list for PBXNativeTarget "Measurement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A40A6B823AD92500031E91F /* Debug */,
+				9A40A6B923AD92500031E91F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9A8BDFC223450DF6000D7A85 /* Build configuration list for PBXProject "Huffman" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

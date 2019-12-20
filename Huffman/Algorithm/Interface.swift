@@ -15,7 +15,7 @@ enum Huffman {
                     .map { Tree.Node(frequence: $0.value, value: $0.key) }
         let tree = Tree(array: nodes)
         
-        print(tree.description)
+//        print(tree.description)
         
         let codesTable = convertTreeToCodesTable(tree: tree)
         let compressor = Compressor(codesTables: codesTable)
@@ -25,7 +25,8 @@ enum Huffman {
         let compressedTree = compressTree(tree: tree)
         let compressedValue = compressor.compress(text: string)
         
-        let tail = UInt8(8 - ((compressedTree.count + compressedValue.count + 3) % 8))
+        let numberForTailInfoBits = 3
+        let tail = UInt8(8 - ((compressedTree.count + compressedValue.count + numberForTailInfoBits) % 8))
         let tailInBits = BitReader().readBit(from: tail)[5..<8]
         let treeSizeInBits = BitReader().readBit(from: UInt16(compressedTree.count))
         

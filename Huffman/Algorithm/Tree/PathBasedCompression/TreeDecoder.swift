@@ -38,20 +38,16 @@ extension Huffman {
                 return Tree.Node(frequence: 0, value: array[0].value)
             }
             
-            let leftSubInfo = array
-                .filter { $0.path[0] == false }
+            func getSubTree(isRight right: Bool) -> [Info] {
+                return array
+                .filter { $0.path[0] == right }
                 .map { Info(pathLenght: $0.pathLenght,
                             path: Array($0.path.dropFirst()),
                             value: $0.value) }
+            }
             
-            let rightSubInfo = array
-                .filter { $0.path[0] == true }
-                .map { Info(pathLenght: $0.pathLenght,
-                            path: Array($0.path.dropFirst()),
-                            value: $0.value) }
-            
-            return Tree.Node(left: createSubTree(from: leftSubInfo),
-                             right: createSubTree(from: rightSubInfo))
+            return Tree.Node(left: createSubTree(from: getSubTree(isRight: false)),
+                             right: createSubTree(from: getSubTree(isRight: true)))
         }
         
         let root = createSubTree(from: treeInfo)

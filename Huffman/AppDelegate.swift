@@ -12,21 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        let data = try! Data(contentsOf: URL(string: "https://raw.githubusercontent.com/wess/iotr/master/lotr.txt")!)
-        let text = "Hello world!!!"//String(data: data, encoding: .utf8)!
-        
-        print(Date())
-        let result = Huffman.compress(string: text)
-        print(Date())
-        
-        print(Date())
-        let decompressed = Huffman.decompress(data: result)
-        print(Date())
-        
-        print(text.data(using: .utf8))
-        print(result)
-        print(decompressed == text)
-        
         return true
     }
     
