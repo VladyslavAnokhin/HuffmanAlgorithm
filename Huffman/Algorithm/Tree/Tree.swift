@@ -10,26 +10,40 @@ import Foundation
 
 extension Huffman {
     class Tree {
-        
         class Node {
-            let frequence: Int
-            let value: Character?
-            
-            let right: Node?
-            let left: Node?
-            
-            init(frequence: Int,
-                 value: Character? = nil,
-                 left: Node? = nil,
-                 right: Node? = nil) {
-                self.frequence = frequence
-                self.value = value
-                self.left = left
-                self.right = right
+            enum `Type` {
+                case node(left: Node, right: Node)
+                case leaf(value: Character)
             }
             
-            convenience init(left: Node?, right: Node?) {
-                self.init(frequence: 0, left: left, right: right)
+            let frequence: UInt
+            let type: Type
+            
+            var left: Node? {
+                guard case .node(let left, _) = type else {
+                    return nil
+                }
+                return left
+            }
+            
+            var right: Node? {
+                guard case .node(_, let right) = type else {
+                    return nil
+                }
+                return right
+            }
+            
+            var value: Character? {
+                guard case .leaf(let v) = type else {
+                    return nil
+                }
+                return v
+            }
+            
+            init(frequence: UInt,
+                 type: Type) {
+                self.frequence = frequence
+                self.type = type
             }
         }
         
@@ -55,9 +69,7 @@ extension Huffman {
                 let last = newArray.removeLast()
                 let preLast = newArray.removeLast()
                 let newNode = Node(frequence: last.frequence + preLast.frequence,
-                                   value: nil,
-                                   left: last,
-                                   right: preLast)
+                                   type: .node(left: last, right: preLast))
                 newArray.append(newNode)
                 
                 return connectSmallestNods(candidate: newArray)
@@ -72,12 +84,13 @@ extension Huffman.Tree: CustomStringConvertible {
     var description: String {
         guard let root = root else { return "Empty Tree" }
         func nodeToString(node: Node) -> String {
-            if let value = node.value {
+            if case .leaf(let value) = node.type {
                 return String(value)
             } else {
                 return "*"
             }
         }
+       
         return treeString(root){(nodeToString(node: $0),$0.left, $0.right)}
     }
     

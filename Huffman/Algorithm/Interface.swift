@@ -12,10 +12,8 @@ enum Huffman {
     static func compress(string: String) -> Data {
 
         let nodes = analize(string: string)
-                    .map { Tree.Node(frequence: $0.value, value: $0.key) }
+            .map { Tree.Node(frequence: $0.value, type: .leaf(value: $0.key)) }
         let tree = Tree(array: nodes)
-        
-//        print(tree.description)
         
         let codesTable = convertTreeToCodesTable(tree: tree)
         let compressor = Compressor(codesTables: codesTable)

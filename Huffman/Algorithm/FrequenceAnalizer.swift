@@ -9,7 +9,7 @@
 import Foundation
 
 extension Huffman {
-    static func analize(string: String) -> [Character: Int] {
+    static func analize(string: String) -> [Character: UInt] {
         return string.reduce(into: [:]) { result, char in
             let frequance = result[char]
             result[char] = (frequance ?? 0) + 1

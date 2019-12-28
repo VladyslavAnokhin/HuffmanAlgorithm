@@ -13,13 +13,12 @@ class TreeDecoderTest: XCTestCase {
 
     func test() {
         /*
-         Tree graph
-             *
-            / \
-           *   c
-          / \
-         a   b
-         
+             Tree graph
+                 *
+                / \
+               *   c
+              / \
+             a   b
          */
         
         let lengthOfPathA = Huffman.BitReader().readBit(from: UInt16(2))

@@ -17,25 +17,30 @@ extension Huffman {
             let value: Character
         }
         
-        var mutArray = array
         var treeInfo = [Info]()
         
-        while mutArray.isEmpty == false {
-            let pathLenght = Int(awakeInt16(from: Array(mutArray[0..<16])))
-            let path = Array(mutArray[16..<16+pathLenght])
-            let value = Character(UnicodeScalar(Int(awakeInt16(from: Array(mutArray[16+pathLenght..<32+pathLenght]))))!)
+        var i = 0
+        while i < array.count {
+            
+            let startPathLenght = i
+            let endPathLenght = i + 16
+            let pathLenght = Int(awakeInt16(from: Array(array[startPathLenght..<endPathLenght])))
+            
+            let startPath = endPathLenght
+            let endPath = startPath + pathLenght
+            let path = Array(array[startPath..<endPath])
+            
+            let valueStart = endPath
+            let endValue = valueStart + 16
+            let value = Character(UnicodeScalar(Int(awakeInt16(from: Array(array[valueStart..<endValue]))))!)
             
             treeInfo.append(.init(pathLenght: pathLenght, path: path, value: value))
-            mutArray = Array(mutArray.dropFirst(32+pathLenght))
+            i = endValue
         }
         
         func createSubTree(from array: [Info]) -> Tree.Node? {
-            guard array.isEmpty == false else {
-                return nil
-            }
-            
             if array.count == 1 {
-                return Tree.Node(frequence: 0, value: array[0].value)
+                return Tree.Node(frequence: 0, type: .leaf(value: array[0].value))
             }
             
             func getSubTree(isRight right: Bool) -> [Info] {
@@ -46,8 +51,9 @@ extension Huffman {
                             value: $0.value) }
             }
             
-            return Tree.Node(left: createSubTree(from: getSubTree(isRight: false)),
-                             right: createSubTree(from: getSubTree(isRight: true)))
+            return Tree.Node(frequence: 0,
+                             type: .node(left: createSubTree(from: getSubTree(isRight: false))!,
+                                         right: createSubTree(from: getSubTree(isRight: true))!))
         }
         
         let root = createSubTree(from: treeInfo)
