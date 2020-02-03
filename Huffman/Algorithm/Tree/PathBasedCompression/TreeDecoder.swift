@@ -38,7 +38,7 @@ extension Huffman {
             i = endValue
         }
         
-        func createSubTree(from array: [Info]) -> Tree.Node? {
+        func createSubTree(from array: [Info]) -> Tree.Node {
             if array.count == 1 {
                 return Tree.Node(frequence: 0, type: .leaf(value: array[0].value))
             }
@@ -52,8 +52,8 @@ extension Huffman {
             }
             
             return Tree.Node(frequence: 0,
-                             type: .node(left: createSubTree(from: getSubTree(isRight: false))!,
-                                         right: createSubTree(from: getSubTree(isRight: true))!))
+                             type: .node(left: createSubTree(from: getSubTree(isRight: false)),
+                                         right: createSubTree(from: getSubTree(isRight: true))))
         }
         
         let root = createSubTree(from: treeInfo)
